@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_qa-
+
+Sitemap: https://www.shubhveda.com/sitemap.xml

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#06251B">
+  <title>Janma Kundali, Navamsa &amp; Dasha | Subhveda</title>
+  <meta name="description" content="Generate your Vedic birth chart free — Lagna, graha positions, Navamsa (D9) and all D1–D12 divisional charts with a Vimshottari Dasha timeline. Enter your birth date, time and place.">
+  <link rel="canonical" href="https://www.shubhveda.com/kundali.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Subhveda">
+  <meta property="og:title" content="Janma Kundali, Navamsa &amp; Dasha | Subhveda">
+  <meta property="og:description" content="Free Vedic birth chart calculator — lagna, graha positions, Navamsa, D1–D12 divisional charts and Vimshottari Dasha, computed with the Lahiri ayanamsa.">
+  <meta property="og:url" content="https://www.shubhveda.com/kundali.html">
+  <meta property="og:image" content="https://www.shubhveda.com/images/rudra-poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="skip_content">Skip to content</a>
+
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo" aria-label="Subhveda home">
+        <div class="logo-icon" aria-hidden="true">ॐ</div>
+        <div class="logo-text-group">
+          <span class="logo-text">Subh<span class="logo-accent">veda</span></span>
+          <span class="logo-subtitle">By PT. Shambhu Parsad Sharma</span>
+        </div>
+      </a>
+      <nav class="nav-menu" id="main-navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">Home</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about">About</a>
+        <a href="services.html" class="nav-link" data-i18n="nav_services">Services</a>
+        <a href="panchang.html" class="nav-link" data-i18n="nav_panchang">Panchang</a>
+        <a href="calendar.html" class="nav-link" data-i18n="nav_calendar">Calendar</a>
+        <a href="kundali.html" class="nav-link active" aria-current="page" data-i18n="nav_kundali">Kundali</a>
+        <a href="testimonials.html" class="nav-link" data-i18n="nav_testimonials">Testimonials</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a>
+        <div class="nav-cta">
+          <div class="lang-switcher" role="group" aria-label="Language">
+            <button class="lang-btn active" data-lang="en" aria-label="English" aria-pressed="true">EN</button>
+            <button class="lang-btn" data-lang="hi" aria-label="हिन्दी" aria-pressed="false">हिं</button>
+            <button class="lang-btn" data-lang="ne" aria-label="नेपाली" aria-pressed="false">ने</button>
+          </div>
+          <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav_book_now">Book a consultation</a>
+        </div>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-header k-page-header">
+      <div class="container">
+        <span class="section-eyebrow" data-i18n="kundali_eyebrow">Free Vedic Calculator</span>
+        <h1 data-i18n="kundali_title">Your Janma Kundali</h1>
+        <p class="k-page-lead" data-i18n="kundali_desc">Enter your birth details to generate your Vedic birth chart and Vimshottari Dasha timeline — calculated using the Lahiri ayanamsa.</p>
+        <p class="breadcrumb"><a href="index.html" data-i18n="nav_home">Home</a> / <span data-i18n="nav_kundali">Kundali</span></p>
+      </div>
+    </section>
+
+    <section class="section-padding bg-primary k-app-section" id="kundali-calc">
+      <div class="container">
+        <div class="k-app fade-in">
+          <div class="k-app-tabs" role="tablist" aria-label="Kundali tools">
+            <button type="button" class="k-app-tab is-active" id="mode-janma" role="tab" aria-selected="true" aria-pressed="true" aria-controls="janma-panel">
+              <strong data-i18n="kundali_mode_janma">Janam Kundali</strong>
+              <span data-i18n="kundali_mode_janma_desc">Birth chart, lagna and Vimshottari dasha.</span>
+            </button>
+            <button type="button" class="k-app-tab" id="mode-milan" role="tab" aria-selected="false" aria-pressed="false" aria-controls="milan-panel">
+              <strong data-i18n="kundali_mode_milan">Kundali Match Making</strong>
+              <span data-i18n="kundali_mode_milan_desc">Ashtakoota guna milan for two birth charts.</span>
+            </button>
+          </div>
+
+          <div class="k-app-panel" id="janma-panel" role="tabpanel" aria-labelledby="mode-janma">
+            <form class="kundali-form" id="kundali-form" novalidate>
+              <div class="k-form-head">
+                <h3 data-i18n="kundali_form_title">Enter Birth Details</h3>
+                <p data-i18n="kundali_form_desc">Accurate birth time gives the most precise lagna and dasha. All calculations happen in your browser — nothing is stored on our servers.</p>
+              </div>
+              <div class="kundali-grid">
+                <div class="form-group">
+                  <label for="kundali-name" data-i18n="kundali_name">Full Name (optional)</label>
+                  <input type="text" id="kundali-name" name="name" autocomplete="name" maxlength="80" data-i18n-placeholder="kundali_name_ph" placeholder="e.g. Aarav Sharma">
+                </div>
+                <div class="form-group">
+                  <label for="kundali-gender" data-i18n="kundali_gender">Gender (optional)</label>
+                  <select id="kundali-gender" name="gender">
+                    <option value="" data-i18n="kundali_gender_select">Prefer not to say</option>
+                    <option value="male" data-i18n="kundali_male">Male</option>
+                    <option value="female" data-i18n="kundali_female">Female</option>
+                    <option value="other" data-i18n="kundali_other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="kundali-dob" data-i18n="kundali_dob">Date of Birth *</label>
+                  <input type="date" id="kundali-dob" name="dob" min="1900-01-01" max="2026-12-31" required>
+                </div>
+                <div class="form-group">
+                  <label for="kundali-tob" data-i18n="kundali_tob">Time of Birth *</label>
+                  <input type="time" id="kundali-tob" name="tob" required>
+                </div>
+                <div class="form-group kundali-grid-full kundali-place-group">
+                  <label for="kundali-place" data-i18n="kundali_place">Place of Birth *</label>
+                  <div class="kundali-place-wrap">
+                    <input type="text" id="kundali-place" name="place" autocomplete="off" maxlength="160" required
+                      role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="kundali-place-list"
+                      data-i18n-placeholder="kundali_place_ph" placeholder="Village, town, city or district">
+                    <span class="kundali-place-spinner" id="kundali-place-spinner" aria-hidden="true" hidden></span>
+                    <ul class="kundali-suggestions" id="kundali-place-list" role="listbox" hidden></ul>
+                  </div>
+                  <p class="kundali-hint" data-i18n="kundali_place_hint">Type at least two letters and choose a suggestion. Villages, towns and districts are supported.</p>
+                  <p class="kundali-hint kundali-place-status" id="kundali-place-status" role="status" aria-live="polite" hidden></p>
+                </div>
+                <div class="kundali-custom kundali-grid-full" id="kundali-custom">
+                  <details class="kundali-manual" id="kundali-manual">
+                    <summary data-i18n="kundali_manual_title">Coordinates and timezone</summary>
+                    <div class="kundali-coords">
+                      <div class="form-group">
+                        <label for="kundali-lat" data-i18n="kundali_lat">Latitude (°N)</label>
+                        <input type="number" id="kundali-lat" name="lat" min="-90" max="90" step="0.0001" inputmode="decimal" placeholder="28.6139">
+                      </div>
+                      <div class="form-group">
+                        <label for="kundali-lon" data-i18n="kundali_lon">Longitude (°E)</label>
+                        <input type="number" id="kundali-lon" name="lon" min="-180" max="180" step="0.0001" inputmode="decimal" placeholder="77.2090">
+                      </div>
+                      <div class="form-group">
+                        <label for="kundali-tz" data-i18n="kundali_tz">Timezone at birth</label>
+                        <select id="kundali-tz" name="tz"></select>
+                      </div>
+                    </div>
+                    <button type="button" class="k-detect-btn" id="kundali-detect" data-i18n="kundali_detect">Use my current location</button>
+                    <p class="kundali-hint" id="kundali-detect-status" hidden></p>
+                    <p class="kundali-hint" data-i18n="kundali_custom_hint">Choose a suggestion above to fill these automatically. If the place is not found, enter its coordinates and the timezone that was in use there at birth.</p>
+                  </details>
+                </div>
+              </div>
+              <div class="kundali-error" id="kundali-error" role="alert" hidden></div>
+              <div class="k-form-actions">
+                <button type="submit" class="btn btn-primary btn-lg" id="kundali-submit" data-i18n="kundali_submit">Generate Kundali</button>
+                <button type="button" class="btn btn-ghost btn-lg" id="kundali-clear" data-i18n="kundali_clear">Clear</button>
+              </div>
+              <p class="kundali-note" data-i18n="kundali_note">Use the exact time from your birth certificate or hospital record for the most accurate lagna and dasha.</p>
+            </form>
+          </div>
+
+          <div class="k-app-panel" id="milan-panel" role="tabpanel" aria-labelledby="mode-milan" hidden>
+            <div class="k-form-head">
+              <h3 data-i18n="milan_title">Kundali Match Making</h3>
+              <p data-i18n="milan_desc">Compare two birth charts on the classical Ashtakoota scale — 36 gunas across eight kootas, with Mangal dosha, read from each person's Moon nakshatra and rashi.</p>
+            </div>
+
+            <div class="milan-grid">
+              <div class="milan-panel fade-in">
+                <h3 data-i18n="milan_vadhu">Vadhu (Bride)</h3>
+                <div class="form-group">
+                  <label for="milan-vadhu-name" data-i18n="kundali_name">Full Name (optional)</label>
+                  <input type="text" id="milan-vadhu-name" maxlength="80" autocomplete="off" data-i18n-placeholder="kundali_name_ph" placeholder="e.g. Aarav Sharma">
+                </div>
+                <div class="form-group">
+                  <label for="milan-vadhu-dob" data-i18n="kundali_dob">Date of Birth *</label>
+                  <input type="date" id="milan-vadhu-dob" min="1900-01-01">
+                </div>
+                <div class="form-group">
+                  <label for="milan-vadhu-tob" data-i18n="kundali_tob">Time of Birth *</label>
+                  <input type="time" id="milan-vadhu-tob">
+                </div>
+                <div class="form-group">
+                  <label for="milan-vadhu-region" data-i18n="milan_region">State / Province</label>
+                  <select id="milan-vadhu-region"></select>
+                </div>
+                <div class="form-group milan-place-group">
+                  <label for="milan-vadhu-place" data-i18n="milan_place">Place of Birth</label>
+                  <div class="milan-place-wrap">
+                    <input type="text" id="milan-vadhu-place" autocomplete="off" maxlength="160"
+                      role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="milan-vadhu-place-list"
+                      data-i18n-placeholder="milan_place_ph" placeholder="Village, town or city">
+                    <ul class="milan-suggestions" id="milan-vadhu-place-list" role="listbox" hidden></ul>
+                  </div>
+                  <p class="milan-place-status" id="milan-vadhu-place-status" role="status" aria-live="polite" hidden></p>
+                </div>
+                <div class="form-group">
+                  <label for="milan-vadhu-tz" data-i18n="kundali_tz">Timezone at birth</label>
+                  <select id="milan-vadhu-tz"></select>
+                </div>
+              </div>
+              <div class="milan-panel fade-in">
+                <h3 data-i18n="milan_var">Var (Groom)</h3>
+                <div class="form-group">
+                  <label for="milan-var-name" data-i18n="kundali_name">Full Name (optional)</label>
+                  <input type="text" id="milan-var-name" maxlength="80" autocomplete="off" data-i18n-placeholder="kundali_name_ph" placeholder="e.g. Aarav Sharma">
+                </div>
+                <div class="form-group">
+                  <label for="milan-var-dob" data-i18n="kundali_dob">Date of Birth *</label>
+                  <input type="date" id="milan-var-dob" min="1900-01-01">
+                </div>
+                <div class="form-group">
+                  <label for="milan-var-tob" data-i18n="kundali_tob">Time of Birth *</label>
+                  <input type="time" id="milan-var-tob">
+                </div>
+                <div class="form-group">
+                  <label for="milan-var-region" data-i18n="milan_region">State / Province</label>
+                  <select id="milan-var-region"></select>
+                </div>
+                <div class="form-group milan-place-group">
+                  <label for="milan-var-place" data-i18n="milan_place">Place of Birth</label>
+                  <div class="milan-place-wrap">
+                    <input type="text" id="milan-var-place" autocomplete="off" maxlength="160"
+                      role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="milan-var-place-list"
+                      data-i18n-placeholder="milan_place_ph" placeholder="Village, town or city">
+                    <ul class="milan-suggestions" id="milan-var-place-list" role="listbox" hidden></ul>
+                  </div>
+                  <p class="milan-place-status" id="milan-var-place-status" role="status" aria-live="polite" hidden></p>
+                </div>
+                <div class="form-group">
+                  <label for="milan-var-tz" data-i18n="kundali_tz">Timezone at birth</label>
+                  <select id="milan-var-tz"></select>
+                </div>
+              </div>
+            </div>
+
+            <div class="milan-actions">
+              <button type="button" class="btn btn-primary btn-lg" id="milan-submit" data-i18n="milan_submit">Check Milan</button>
+              <button type="button" class="btn btn-ghost btn-lg" id="milan-reset" data-i18n="milan_reset">Clear</button>
+            </div>
+            <p class="milan-error" id="milan-error" role="alert" hidden></p>
+            <div class="milan-results" id="milan-results" hidden></div>
+            <p class="milan-disclaimer" id="milan-disclaimer"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner is-dark">
+      <div class="container">
+        <div class="cta-panel">
+          <span class="section-eyebrow" data-i18n="cta_kicker">Your next chapter</span>
+          <h2 data-i18n="svc_cta_title">Need Guidance Choosing the Right Service?</h2>
+          <p data-i18n="svc_cta_desc">Our experts will help you identify the most suitable service for your specific needs.</p>
+          <div class="cta-buttons">
+            <a href="https://api.whatsapp.com/send?phone=919891646982&amp;text=Namaste!%20I%20need%20guidance%20on%20which%20service%20is%20right%20for%20me." class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener" data-i18n="svc_cta_consult">Get Free Consultation</a>
+            <a href="services.html" class="btn btn-outline-light btn-lg" data-i18n="about_cta_services">View Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="k-modal" id="kundali-modal" hidden>
+    <div class="k-modal-backdrop" data-k-modal-close></div>
+    <div class="k-modal-panel" role="dialog" aria-modal="true" aria-labelledby="kundali-modal-title" tabindex="-1">
+      <header class="k-modal-head">
+        <div class="k-modal-head-text">
+          <span class="section-eyebrow" data-i18n="kundali_results_eyebrow">Your Birth Chart</span>
+          <h2 id="kundali-modal-title" data-i18n="kundali_results_title">Kundali &amp; Dasha</h2>
+          <p class="kundali-meta" id="kundali-meta"></p>
+        </div>
+        <div class="k-modal-head-side">
+          <div class="k-results-actions">
+            <button type="button" class="k-print-btn" id="kundali-print" data-i18n="kundali_print">Print / Save PDF</button>
+            <button type="button" class="k-print-btn k-reset-btn" id="kundali-reset" data-i18n="kundali_reset">New Kundali</button>
+            <button type="button" class="k-modal-close" id="kundali-modal-close" data-i18n="kundali_close">Close</button>
+          </div>
+        </div>
+        <div class="k-result-badges">
+          <span class="k-badge" data-i18n="kundali_badge_ayanamsa">Lahiri Ayanamsa</span>
+          <span class="k-badge" data-i18n="kundali_badge_houses">Whole-sign houses</span>
+          <span class="k-badge" data-i18n="kundali_badge_dasha">Vimshottari Dasha</span>
+        </div>
+      </header>
+
+      <div class="k-modal-body" id="kundali-modal-body">
+        <div class="kundali-results" id="kundali-results" hidden>
+          <div class="kundali-summary" id="kundali-summary"></div>
+
+          <div class="kundali-main">
+            <div class="kundali-card">
+              <div class="k-card-head">
+                <span class="k-varga-code">D1</span>
+                <h3 data-i18n="kundali_chart_title">Janma Kundali (North Indian)</h3>
+              </div>
+              <p class="kundali-card-desc" id="kundali-d1-purpose"></p>
+              <div class="kundali-chart" id="kundali-chart"></div>
+              <p class="k-chart-hint" data-i18n="kundali_aspect_hint">Tap a graha in the chart to see where it casts drishti.</p>
+              <p class="k-aspect-note" id="kundali-aspect-note" role="status" aria-live="polite" hidden></p>
+              <p class="kundali-legend" id="kundali-legend"></p>
+              <p class="kundali-legend k-abbr-legend" id="kundali-abbr"></p>
+            </div>
+            <div class="kundali-card">
+              <h3 data-i18n="kundali_positions_title">Graha Positions</h3>
+              <div class="k-table-wrap">
+                <table class="k-table">
+                  <thead>
+                    <tr>
+                      <th data-i18n="kundali_th_planet">Graha</th>
+                      <th data-i18n="kundali_th_sign">Rashi</th>
+                      <th data-i18n="kundali_th_degree">Degree</th>
+                      <th data-i18n="kundali_th_house">Bhava</th>
+                      <th data-i18n="kundali_th_motion">Gati</th>
+                    </tr>
+                  </thead>
+                  <tbody id="kundali-positions"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="kundali-vargas">
+            <div class="kundali-section-head">
+              <span class="section-eyebrow" data-i18n="kundali_varga_eyebrow">Divisional Charts</span>
+              <h3 data-i18n="kundali_varga_title">D1 to D12 Vargas</h3>
+              <p data-i18n="kundali_varga_desc">Choose a divisional chart from the list to study it on a large chart with its positions and key facts.</p>
+            </div>
+            <div class="k-varga-toolbar">
+              <label for="kundali-varga-select" data-i18n="kundali_varga_select">Select divisional chart</label>
+              <select id="kundali-varga-select"></select>
+            </div>
+            <div class="k-varga-view" id="kundali-varga-view"></div>
+            <p class="kundali-varga-note" data-i18n="kundali_varga_note">Varga charts follow the classical Parashara rules; minor conventions can differ between schools.</p>
+          </div>
+
+          <div class="kundali-card kundali-phal-section">
+            <div class="kundali-section-head">
+              <span class="section-eyebrow" data-i18n="kundali_phal_eyebrow">Detailed Phaladesh</span>
+              <h3 data-i18n="kundali_phal_title">Your Phaladesh, in Plain Language</h3>
+              <p data-i18n="kundali_phal_desc">Select a divisional chart from the dropdown to read its complete phaladesh in simple language — what this area means, how strong it is, the timing, and what to do next.</p>
+            </div>
+            <div class="k-varga-toolbar k-phal-toolbar">
+              <label for="kundali-phal-select" data-i18n="kundali_phal_select">Select divisional chart for phaladesh</label>
+              <select id="kundali-phal-select"></select>
+            </div>
+            <div class="k-phal-detail" id="kundali-phal-detail"></div>
+            <p class="kundali-varga-note" data-i18n="kundali_phal_note">This reading is generated from the selected divisional chart and the running Vimshottari periods. It is general guidance, not a substitute for a personal consultation.</p>
+          </div>
+
+          <div class="kundali-card k-dasha-card">
+            <div class="k-dasha-head">
+              <div>
+                <h3 data-i18n="kundali_dasha_title">Vimshottari Dasha</h3>
+                <p class="kundali-card-desc" data-i18n="kundali_dasha_desc">Mahadasha periods of 120 years. Open a Mahadasha, then an Antardasha, to see its Pratyantardashas.</p>
+              </div>
+              <div class="k-dasha-actions">
+                <button type="button" class="k-dasha-btn" id="kundali-dasha-expand" data-i18n="kundali_dasha_expand">Expand all</button>
+                <button type="button" class="k-dasha-btn" id="kundali-dasha-collapse" data-i18n="kundali_dasha_collapse">Collapse all</button>
+              </div>
+            </div>
+            <p class="kundali-balance" id="kundali-dasha-balance"></p>
+            <div class="k-dasha-now" id="kundali-dasha-now" hidden></div>
+            <p class="k-dasha-hint" data-i18n="kundali_dasha_hint">Tap a Mahadasha, then an Antardasha, to open its Pratyantardasha table.</p>
+            <div class="k-dasha-list" id="kundali-dasha"></div>
+          </div>
+
+          <div class="kundali-result-cta">
+            <div>
+              <h3 data-i18n="kundali_cta_title">Want a Deeper Reading?</h3>
+              <p data-i18n="kundali_cta_desc">Share your kundali with Pandit ji for a personal consultation on dasha, doshas, and remedies.</p>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=919891646982&amp;text=Namaste!%20I%20generated%20my%20kundali%20on%20your%20website%20and%20would%20like%20a%20consultation." class="btn btn-whatsapp" target="_blank" rel="noopener" data-i18n="kundali_cta_btn">Book Consultation</a>
+          </div>
+
+          <p class="kundali-disclaimer" data-i18n="kundali_disclaimer">This calculator follows the Lahiri ayanamsa and the Vimshottari system. Planetary positions use an approximate ephemeris and may differ slightly from specialised software. For important life decisions, consult Pandit ji.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon" aria-hidden="true">ॐ</span><span class="logo-text">Subhveda</span></a><small>By PT. Shambhu Parsad Sharma</small><p data-i18n="footer_brand_desc">Preserving and sharing the sacred Vedic traditions of India and Nepal.</p><a class="text-link" href="https://api.whatsapp.com/send?phone=919891646982" target="_blank" rel="noopener"><span data-i18n="hero_whatsapp">Chat on WhatsApp</span><span data-icon="arrow-right"></span></a></div>
+        <div class="footer-col"><h4 data-i18n="footer_quick_links">Quick Links</h4><ul><li><a href="index.html" data-i18n="footer_home">Home</a></li><li><a href="about.html" data-i18n="footer_about">About Us</a></li><li><a href="services.html" data-i18n="footer_services">Services</a></li><li><a href="panchang.html" data-i18n="nav_panchang">Panchang</a></li><li><a href="calendar.html" data-i18n="nav_calendar">Calendar</a></li><li><a href="kundali.html" data-i18n="nav_kundali">Kundali</a></li><li><a href="testimonials.html" data-i18n="footer_testimonials">Testimonials</a></li><li><a href="contact.html" data-i18n="footer_contact">Contact</a></li></ul></div>
+        <div class="footer-col"><h4 data-i18n="footer_services_title">Services</h4><ul><li><a href="services.html#astrology" data-i18n="footer_svc_astrology">Astrology (Jyotish)</a></li><li><a href="services.html#puja" data-i18n="footer_svc_puja">Puja Path</a></li><li><a href="services.html#navgraha" data-i18n="footer_svc_navgraha">Nav Grah Pujan</a></li><li><a href="services.html#grha-shanti" data-i18n="footer_svc_grha_shanti">Grha Shanti</a></li><li><a href="services.html#anushthan" data-i18n="footer_svc_anushthan">Anushthan</a></li><li><a href="services.html#vedic-sanskar" data-i18n="footer_svc_vedic_sanskar">Vedic Sanskar</a></li></ul></div>
+        <div class="footer-col"><h4 data-i18n="footer_stay_connected">Stay Connected</h4><a class="footer-phone" href="tel:+919891646982">+91 98916 46982</a><p class="footer-hours" data-i18n="footer_hours">Mon–Sat · 9 AM–8 PM IST</p></div>
+      </div>
+      <div class="footer-bottom"><p data-i18n="footer_copyright">© 2026 Subhveda. All rights reserved.</p><span class="footer-credit" data-i18n="kundali_place_credit">Place search data © OpenStreetMap contributors.</span><span data-i18n="footer_rooted">Rooted in Sacred Tradition</span><a href="#main-content" class="footer-top" data-i18n="back_top">Back to top ↑</a></div>
+    </div>
+  </footer>
+  <a href="https://api.whatsapp.com/send?phone=919891646982&amp;text=Namaste!" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><span data-icon="whatsapp"></span></a>
+  <button class="back-to-top" aria-label="Back to top"><span data-icon="chevron-down"></span></button>
+  <nav class="action-bar" aria-label="Quick actions">
+    <a href="tel:+919891646982" class="action-bar-btn action-bar-call"><span data-icon="phone"></span><span data-i18n="action_call">Call Now</span></a>
+    <a href="https://api.whatsapp.com/send?phone=919891646982&amp;text=Namaste!%20I%20would%20like%20to%20book%20a%20service%20at%20Shubh%20Veda." class="action-bar-btn action-bar-wa" target="_blank" rel="noopener"><span data-icon="whatsapp"></span><span data-i18n="action_book">Book on WhatsApp</span></a>
+  </nav>
+
+  <script src="js/translations.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/i18n.js"></script>
+  <script defer src="js/panchang.js"></script>
+  <script defer src="js/kundali.js"></script>
+  <script defer src="js/milan.js"></script>
+  <script defer src="js/kundali-modes.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>
